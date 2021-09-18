@@ -1,0 +1,66 @@
+// ignore: prefer_typing_uninitialized_variables
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(splashapp());
+}
+
+class splashapp extends StatelessWidget {
+  const splashapp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          color: Color(0xff221F1E),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                  height: 350.0,
+                  child: Image.asset('assets/images/splash_1.png')),
+              Text(
+                "Go Higher & Higher",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 27.0,
+                    fontWeight: FontWeight.w500),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+                child: Text(
+                  "Go for the sky. where u wanna be. You not to have stop . eneryone should run",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white38,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w100),
+                ),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.deepOrange .shade700,
+                  onPrimary: Colors.white,
+                  shadowColor: Colors.deepOrange,
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0)),
+                  minimumSize: Size(200, 60), //////// HERE
+                ),
+                onPressed: () {},
+                child: Text(
+                  'FLew Away',
+                  style: TextStyle(
+                      color: Colors.white70, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
